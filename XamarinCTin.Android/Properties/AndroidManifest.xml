@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" 
+		  package="com.companyname.xamarinctin">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+    <application android:label="XamarinCTin.Android" android:theme="@style/MainTheme" 
+				 android:name="com.clevertap.android.sdk.Application">
+		<meta-data
+			android:name="CLEVERTAP_ACCOUNT_ID"
+			android:value="TEST-468-W87-546Z"/>
+		<meta-data
+			android:name="CLEVERTAP_TOKEN"
+			android:value="TEST-ab0-b64"/>
+		<!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
+		<meta-data
+			android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+			android:value="1"/>
+		<meta-data
+			android:name="FCM_SENDER_ID"
+			android:value="id:540192587568" />
+		<service
+            android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService"
+            android:exported="true">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+</manifest>

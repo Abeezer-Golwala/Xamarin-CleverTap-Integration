@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinCTin.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Create User" Clicked="createuser"/>
+        <Button Text="Push Notification" Clicked="pushnotif"/>
+        <Button Text="In App Notification" Clicked="inapp"/>
+        <Button Text="App Inbox" Clicked="appinbox"/>
+        <Button Text="Native Display" Clicked="nativedp"/>
+        <Button Text="Get message" Clicked="getmsg"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+	  <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CleverTap.Bindings.Android">
+      <HintPath>C:\Users\abeez\Downloads\CleverTap.Bindings.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v12.0.99\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
